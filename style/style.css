@@ -155,12 +155,14 @@ body{
 }
 
 .dish{
-    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 4px;
+    font-weight: 600;
     background-color: rgb(203, 243, 255);
     border-radius: 20px;
     transition: all 300ms ease-out;
+    cursor: pointer;
 
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
