@@ -247,6 +247,10 @@ body{
     background-color: rgb(74, 74, 74);
 }
 
+.selected-dish{
+    background-color: rgb(117, 202, 255);
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

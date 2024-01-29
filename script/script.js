@@ -16,6 +16,10 @@ displayTarget.textContent = valueTarget;
 
 for (let i = 0; i < selectDish.length; i++) {
   selectDish[i].addEventListener("click", function () {
+    for (let j = 0; j < selectDish.length; j++) {
+      selectDish[j].classList.remove("selected-dish");
+    }
+    selectDish[i].classList.add("selected-dish");
     dish = selectDish[i].children[0].textContent;
     displayDetailAdd.textContent = `${dish} ml`;
     return dish;
@@ -35,5 +39,5 @@ addBtn.addEventListener("click", function () {
   } else if (drinkedWater == valueTarget) {
     displayDrinkedWater.textContent = valueTarget;
     addBtn.classList.add("hidden");
-    }
+  }
 });
