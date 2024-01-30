@@ -36,7 +36,7 @@ addBtn.addEventListener("click", function () {
   if (drinkedWater < valueTarget) {
     drinkedWater += Number(dish);
     displayDrinkedWater.textContent = drinkedWater;
-  } else if (drinkedWater == valueTarget) {
+  } if (drinkedWater == valueTarget || drinkedWater > valueTarget) {
     displayDrinkedWater.textContent = valueTarget;
     addBtn.classList.add("hidden");
   }
