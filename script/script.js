@@ -2,6 +2,7 @@
 
 const addBtn = document.querySelector(".plus");
 const setBtn = document.querySelector(".set");
+const dropWater = document.querySelector(".water") 
 let selectDish = document.querySelectorAll(".dish");
 let inputTarget = document.getElementById("value-target");
 let displayDrinkedWater = document.querySelector(".value-drinked-water");
@@ -14,6 +15,18 @@ let dish = 250;
 displayDetailAdd.textContent = `${dish} ml`;
 let valueTarget = 3200;
 displayTarget.textContent = valueTarget;
+
+setInterval(() => {
+  const bubble = document.createElement("span");
+  bubble.className = 'water-bubble';
+  dropWater.appendChild(bubble);
+  
+  bubble.style.width = `${Math.floor(Math.random() * 10 + 10)}px`;
+  bubble.style.left = `${Math.floor(Math.random() * 100)}%`;
+  bubble.style.animationDuration = `${Math.floor(Math.random() * 4000 + 3000)}ms`;
+
+  
+}, 1000);
 
 const setTarget = function () {
   displayTarget.innerHTML = inputTarget.value;
